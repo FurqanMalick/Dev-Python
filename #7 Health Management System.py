@@ -1,3 +1,6 @@
+'''
+DEVELOPED BY "FURQAN MALICK"
+'''
 # ---------------------------------------------------DATE AND TIME FUNCTION----------------------------------------------------------------------------
 def gettime():
     import datetime
@@ -129,31 +132,38 @@ def logsaad():
 # ---------------------------------------------------END LOG FUNCTION----------------------------------------------------------------------------
 
 # ---------------------------------------------------START OF PROGRAM----------------------------------------------------------------------------
-client_id = int(input("Press \'1\' for \"Furqan\", \tPress \'2\' for \"Shakeeb\",\tPress \'3\' for \"Saad\": "))
-update_or_log = int(input("Press \'1\' for \"update data\" & Press \'2\' for \"see log\": "))
+while (True):
+    client_id = int(input("Press \'1\' for \"Furqan\", \tPress \'2\' for \"Shakeeb\",\tPress \'3\' for \"Saad\": "))
+    update_or_log = int(input("Press \'1\' for \"update data\" & Press \'2\' for \"see log\": "))
 
-# UPDATE--------------------
-# FOR FURQAN
-if client_id == 1 and update_or_log == 1:    # (client id == "Furqan") and (update_or_log == update data)
-    updatefurqan()
-# FOR SHAKEEB
-elif client_id == 2 and update_or_log == 1: # (client id == "Shakeeb") and (update_or_log == update data)
-    updateshakeeb()
-# FOR SAAD
-elif client_id == 3 and update_or_log == 1: # (client id == "Saad") and (update_or_log == update data)
-    updatesaad()
+    # UPDATE--------------------
+        # FOR FURQAN
+    if client_id == 1 and update_or_log == 1:    # (client id == "Furqan") and (update_or_log == update data)
+        updatefurqan()
+        continue
+    # FOR SHAKEEB
+    elif client_id == 2 and update_or_log == 1: # (client id == "Shakeeb") and (update_or_log == update data)
+        updateshakeeb()
+        continue
+    # FOR SAAD
+    elif client_id == 3 and update_or_log == 1: # (client id == "Saad") and (update_or_log == update data)
+        updatesaad()
+        continue
+    # LOG--------------------
 
-# LOG--------------------
+    # FOR FURQAN
+    elif client_id == 1 and update_or_log == 2:   # (client id == "Furqan") and (update_or_log == See Log)
+        logfurqan()
+        continue
+    # For FOR SHAKEEB
+    elif client_id == 2 and update_or_log == 2: # (client id == "Shakeeb") and (update_or_log == See Log)
+        logshakeeb()
+        continue
+    # For FOR SHAKEEB
+    elif client_id == 3 and update_or_log == 2:     # (client id == "Saad") and (update_or_log == See Log)
+        logsaad()
+        continue
 
-# FOR FURQAN
-elif client_id == 1 and update_or_log == 2:   # (client id == "Furqan") and (update_or_log == See Log)
-    logfurqan()
-# For FOR SHAKEEB
-elif client_id == 2 and update_or_log == 2: # (client id == "Shakeeb") and (update_or_log == See Log)
-    logshakeeb()
-# For FOR SHAKEEB
-elif client_id == 3 and update_or_log == 2:     # (client id == "Saad") and (update_or_log == See Log)
-    logsaad()
-
-else:
-    print("Invalid Value!\nYou can press only[1, 2, 3] for client & [1, 2] for update and log")
+    else:
+        print("Invalid Value!\nYou can press only[1, 2, 3] for client & [1, 2] for update and log")
+        break
