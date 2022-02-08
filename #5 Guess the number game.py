@@ -1,7 +1,8 @@
+from random import randrange
 def game():
-    n = 44
+    n = randrange(1, 20)
     no_of_guesses = 10
-    attempt = 0
+    attempt = 1
     print("Guess the number between 1 to 50\n")
     while (True):
         if no_of_guesses == 0:
